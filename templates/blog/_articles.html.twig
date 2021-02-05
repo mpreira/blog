@@ -1,0 +1,17 @@
+<article class="row my-10 d-flex align-items-center rounded-right" style="background-color:#f7f7f7; margin:50px auto;">
+    
+    <div class="col-3" style="padding-left: 0px;">
+        
+        <img class="img-fluid rounded-left" src="{{ article.picture }}" title="{{ article.title }}" alt="{{ article.title }}" style="padding-left: 0px;">
+        
+    </div>
+    
+    <div class="d-flex align-items-center col-9">
+            <a href="{{ path('article', {permalink:article.permalink}) }}">
+                <h2>{{ article.title }}</h2>&nbsp;&nbsp;
+            </a>
+            <span class="font-weight-light">Posté par {{ article.user.firstname }} {{ article.user.lastname }} le {{ article.createdAt | date('d/m/Y') }}</span>
+        
+    </div>
+    
+</article>

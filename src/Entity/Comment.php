@@ -43,7 +43,7 @@ class Comment
     private $valid;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="object")
      */
     private $article;
 
@@ -112,12 +112,12 @@ class Comment
         return $this;
     }
 
-    public function getArticle(): ?int
+    public function getArticle(): ?object
     {
         return $this->article;
     }
 
-    public function setArticle(int $article): self
+    public function setArticle(object $article): self
     {
         $this->article = $article;
 
